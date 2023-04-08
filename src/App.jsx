@@ -1,9 +1,10 @@
 import './App.css';
+import CalContainer from './CalContainer';
 
 function App() {
   return (
     <div className="App">
-      <div>Calendar</div>
+      <CalContainer />
     </div>
   );
 }
