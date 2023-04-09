@@ -1,5 +1,5 @@
+import CalContainer from './components/CalContainer';
 import './App.css';
-import CalContainer from './CalContainer';
 
 function App() {
   return (

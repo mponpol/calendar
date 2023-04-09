@@ -1,7 +1,7 @@
 import React from 'react';
-import './CalContainer.css';
 import CalHeader from './CalHeader/CalHeader';
 import MonthGrid from './MonthGrid';
+import './CalContainer.css';
 
 function CalContainer() {
   return (
