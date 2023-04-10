@@ -21,8 +21,8 @@ function InitCalendar({ date }) {
     <table className="month-grid">
       <thead className="month-grid--head">
         <tr className="weekdays">
-          {weekdays.map((day, i) => (
-            <th className="weekdays--day" key={i}>
+          {weekdays.map(day => (
+            <th className="weekdays--day" key={day}>
               <span className="header-day">{day}</span>
             </th>
           ))}
@@ -31,8 +31,11 @@ function InitCalendar({ date }) {
       <tbody className="month-grid--body">
         {monthGrid.map((row, i) => (
           <tr className="week" key={i}>
-            {row.map((day, idx) => (
-              <DailyCell day={day} key={idx} />
+            {row.map(day => (
+              <DailyCell
+                day={day}
+                key={`${day.year()}${day.month()}${day.date()}`}
+              />
             ))}
           </tr>
         ))}

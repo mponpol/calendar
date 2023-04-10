@@ -23,6 +23,11 @@
   align-items: center;
 }
 
+.prev-month-day,
+.next-month-day {
+  opacity: 0.5;
+}
+
 .current-day p {
   display: flex;
   background: #2b4865;
