@@ -1,14 +1,16 @@
 import React from 'react';
-import { useState } from 'react';
-import dayjs from 'dayjs';
+// import { useState } from 'react';
+// import dayjs from 'dayjs';
+import { DateProvider } from '../context/DateContext';
 import InitCalendar from '../helpers/InitCalendar';
 import './MonthGrid.css';
 
 function MonthGrid() {
-  const [date, setDate] = useState(dayjs());
   return (
     <div className="month-grid">
-      <InitCalendar date={date} />
+      <DateProvider>
+        <InitCalendar />
+      </DateProvider>
     </div>
   );
 }

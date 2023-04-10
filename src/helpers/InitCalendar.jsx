@@ -1,8 +1,10 @@
 import React from 'react';
+import { useDate } from '../context/DateContext';
 import dayjs from 'dayjs';
 import DailyCell from '../components/DailyCell';
 
-function InitCalendar({ date }) {
+function InitCalendar() {
+  const { date } = useDate();
   const year = date.year();
   const month = date.month();
   const firstDayMonth = date.date(1).day();
@@ -17,6 +19,7 @@ function InitCalendar({ date }) {
   const weekdays = new Array(7).fill(null).map((_, i) => {
     return dayjs().day(i).format('ddd');
   });
+
   return (
     <table className="month-grid">
       <thead className="month-grid--head">
